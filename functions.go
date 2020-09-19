@@ -1,7 +1,9 @@
 package functions
 
-// RangeList ...
-type RangeList struct {
+// run: `go get github.com/imjoseangel/functions-go`
+
+// Range ...
+type Range struct {
 	MinList int
 	MaxList int
 }
@@ -9,12 +11,12 @@ type RangeList struct {
 // Array ...
 type Array []int
 
-// MakeRange ...
-func (listrange RangeList) MakeRange() []int {
+// RangeArray ...
+func (arrayrange Range) RangeArray() []int {
 
-	NewList := make([]int, listrange.MaxList-listrange.MinList+1)
+	NewList := make([]int, arrayrange.MaxList-arrayrange.MinList+1)
 	for Item := range NewList {
-		NewList[Item] = listrange.MinList + Item
+		NewList[Item] = arrayrange.MinList + Item
 	}
 
 	return NewList
@@ -27,4 +29,10 @@ func (array Array) SumArray() int {
 		result += numb
 	}
 	return result
+}
+
+// Hello ...
+// fmt.Println(functions.Hello())
+func Hello() string {
+	return "Hello World!"
 }
