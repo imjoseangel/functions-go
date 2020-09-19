@@ -6,8 +6,8 @@ type RangeList struct {
 	MaxList int
 }
 
-// MyArray ...
-type MyArray []int
+// Array ...
+type Array []int
 
 // MakeRange ...
 func (listrange RangeList) MakeRange() []int {
@@ -21,7 +21,7 @@ func (listrange RangeList) MakeRange() []int {
 }
 
 // SumArray ...
-func (array MyArray) SumArray() int {
+func (array Array) SumArray() int {
 	result := 0
 	for _, numb := range array {
 		result += numb
