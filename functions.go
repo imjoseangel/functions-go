@@ -6,13 +6,25 @@ type RangeList struct {
 	MaxList int
 }
 
-// MakeRange ...
-func (r RangeList) MakeRange() []int {
+// Array ...
+type Array []int
 
-	NewList := make([]int, r.MaxList-r.MinList+1)
+// MakeRange ...
+func (listrange RangeList) MakeRange() []int {
+
+	NewList := make([]int, listrange.MaxList-listrange.MinList+1)
 	for Item := range NewList {
-		NewList[Item] = r.MinList + Item
+		NewList[Item] = listrange.MinList + Item
 	}
 
 	return NewList
+}
+
+// SumArray ...
+func (array Array) SumArray() int {
+	result := 0
+	for _, numb := range array {
+		result += numb
+	}
+	return result
 }
