@@ -12,6 +12,7 @@ type Range struct {
 type Array []int
 
 // RangeArray ...
+// Created this way to use struct with a function inside a module
 func (arrayrange Range) RangeArray() []int {
 
 	result := make([]int, arrayrange.MaxList-arrayrange.MinList+1)
@@ -23,6 +24,7 @@ func (arrayrange Range) RangeArray() []int {
 }
 
 // SumArray ...
+// Created this way to use struct with a function inside a module
 func (array Array) SumArray() int {
 	result := 0
 	for _, numb := range array {
@@ -39,6 +41,16 @@ func SliceArray(array []int, start int) []int {
 		result = append(result, array[i])
 	}
 	return result
+}
+
+// IndexArray ...
+func IndexArray(array []int, item int) int {
+	for result := range array {
+		if array[result] == item {
+			return result
+		}
+	}
+	return -1
 }
 
 // Hello ...

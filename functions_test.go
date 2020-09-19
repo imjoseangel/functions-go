@@ -7,13 +7,6 @@ import (
 
 var mylist = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
-func TestHello(t *testing.T) {
-	expected := "Hello World!"
-	if ret := Hello(); ret != expected {
-		t.Errorf("Hello() = %q, want %q", ret, expected)
-	}
-}
-
 func TestRangeArray(t *testing.T) {
 	expected := mylist
 	newarray := Range{
@@ -35,7 +28,7 @@ func TestSumArray(t *testing.T) {
 	}
 }
 
-func TestSliceArray01(t *testing.T) {
+func TestSliceArray(t *testing.T) {
 	expectede := []int{2, 4, 6, 8, 10}
 	rete := SliceArray(mylist, 1)
 	expectedo := []int{1, 3, 5, 7, 9}
@@ -47,5 +40,20 @@ func TestSliceArray01(t *testing.T) {
 
 	if !reflect.DeepEqual(reto, expectedo) {
 		t.Errorf("SliceArray() = %q, want %q", reto, expectedo)
+	}
+}
+
+func TestIndexArray(t *testing.T) {
+	expected := 5
+
+	if ret := IndexArray(mylist, 6); ret != expected {
+		t.Errorf("SumArray() = %q, want %q", ret, expected)
+	}
+}
+
+func TestHello(t *testing.T) {
+	expected := "Hello World!"
+	if ret := Hello(); ret != expected {
+		t.Errorf("Hello() = %q, want %q", ret, expected)
 	}
 }
