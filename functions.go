@@ -14,12 +14,12 @@ type Array []int
 // RangeArray ...
 func (arrayrange Range) RangeArray() []int {
 
-	NewList := make([]int, arrayrange.MaxList-arrayrange.MinList+1)
-	for Item := range NewList {
-		NewList[Item] = arrayrange.MinList + Item
+	result := make([]int, arrayrange.MaxList-arrayrange.MinList+1)
+	for Item := range result {
+		result[Item] = arrayrange.MinList + Item
 	}
 
-	return NewList
+	return result
 }
 
 // SumArray ...
@@ -27,6 +27,16 @@ func (array Array) SumArray() int {
 	result := 0
 	for _, numb := range array {
 		result += numb
+	}
+	return result
+}
+
+// SliceArray ...
+func SliceArray(array []int, start int) []int {
+
+	result := []int{}
+	for i := start; i < len(array); i += 2 {
+		result = append(result, array[i])
 	}
 	return result
 }

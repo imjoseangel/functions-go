@@ -34,3 +34,18 @@ func TestSumArray(t *testing.T) {
 		t.Errorf("SumArray() = %q, want %q", ret, expected)
 	}
 }
+
+func TestSliceArray01(t *testing.T) {
+	expectede := []int{2, 4, 6, 8, 10}
+	rete := SliceArray(mylist, 1)
+	expectedo := []int{1, 3, 5, 7, 9}
+	reto := SliceArray(mylist, 0)
+
+	if !reflect.DeepEqual(rete, expectede) {
+		t.Errorf("SliceArray() = %q, want %q", rete, expectede)
+	}
+
+	if !reflect.DeepEqual(reto, expectedo) {
+		t.Errorf("SliceArray() = %q, want %q", reto, expectedo)
+	}
+}
