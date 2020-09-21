@@ -16,3 +16,6 @@
 
 # Sandbox directory
 sandbox/
+
+# Mac stuff
+.DS_Store
