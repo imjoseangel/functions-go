@@ -14,7 +14,7 @@ contact_links:
       For more information, see
       https://github.com/imjoseangel/functions-go
   - name: 📝 Code of Conduct
-    url: https://github.com/imjoseangel/functions-go/blob/devel/.github/CODE_OF_CONDUCT.md
+    url: https://github.com/imjoseangel/functions-go/blob/devel/CODE_OF_CONDUCT.md
     about: ❤ Be nice to other members of the community. ☮ Behave.
   - name: 💬 Talks to the community
     url: https://github.com/imjoseangel/functions-go?utm_medium=github&utm_source=issue_template_chooser#mailing-list-information
