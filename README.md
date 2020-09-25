@@ -10,6 +10,12 @@ To use it, run:
 go get github.com/imjoseangel/functions-go
 ```
 
+To upadte with a specific release:
+
+```bash
+go get -u github.com/imjoseangel/functions-go@v1.0.5
+```
+
 And import:
 
 ```go
