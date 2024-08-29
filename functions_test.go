@@ -59,7 +59,7 @@ func TestHello(t *testing.T) {
 }
 
 func TestReverseRunes(t *testing.T) {
-	expected := "dlroW olleH"
+	expected := "!dlroW olleH"
 	if ret := ReverseRunes("Hello World!"); ret != expected {
 		t.Errorf("ReverseRunes() = %q, want %q", ret, expected)
 	}
