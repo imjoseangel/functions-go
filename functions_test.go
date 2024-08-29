@@ -64,3 +64,10 @@ func TestReverseRunes(t *testing.T) {
 		t.Errorf("ReverseRunes() = %q, want %q", ret, expected)
 	}
 }
+
+func TestForwardDifference(t *testing.T) {
+	expected := 4.00001000002703221980
+	if ret := ForwardDifference(2.0, 1e-5); ret != expected {
+		t.Errorf("ForwardDifference() = %.20f, want %.20f", ret, expected)
+	}
+}

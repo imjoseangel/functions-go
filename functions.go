@@ -1,5 +1,7 @@
 package functions
 
+import "math"
+
 // run: `go get github.com/imjoseangel/functions-go`
 
 // Range ...
@@ -65,4 +67,13 @@ func ReverseRunes(s string) string {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
 	return string(runes)
+}
+
+func ForwardDifference(x float64, h float64) float64 {
+
+	pow := func(x float64) float64 {
+		return math.Pow(x, 2)
+	}
+
+	return (pow(x+h) - pow(x)) / h
 }
