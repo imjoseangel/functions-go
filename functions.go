@@ -69,11 +69,20 @@ func ReverseRunes(s string) string {
 	return string(runes)
 }
 
+func pow(x float64) float64 {
+	return math.Pow(x, 2)
+}
+
 func ForwardDifference(x float64, h float64) float64 {
 
-	pow := func(x float64) float64 {
-		return math.Pow(x, 2)
-	}
-
 	return (pow(x+h) - pow(x)) / h
+}
+
+func CentralDifference(x float64, h float64) float64 {
+
+	return (pow(x+h) - pow(x-h)) / (2 * h)
+}
+
+func SecondDerivative(x float64, h float64) float64 {
+	return (pow(x+h) - 2*pow(x) + pow(x-h)) / (h * h)
 }

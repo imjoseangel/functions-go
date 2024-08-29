@@ -71,3 +71,10 @@ func TestForwardDifference(t *testing.T) {
 		t.Errorf("ForwardDifference() = %.20f, want %.20f", ret, expected)
 	}
 }
+
+func TestCentralDifference(t *testing.T) {
+	expected := 4.00000000002620481609
+	if ret := CentralDifference(2.0, 1e-5); ret != expected {
+		t.Errorf("CentralDifference() = %.20f, want %.20f", ret, expected)
+	}
+}
