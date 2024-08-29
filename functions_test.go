@@ -78,3 +78,10 @@ func TestCentralDifference(t *testing.T) {
 		t.Errorf("CentralDifference() = %.20f, want %.20f", ret, expected)
 	}
 }
+
+func TestSecondDerivative(t *testing.T) {
+	expected := 2.00000016548074155409
+	if ret := SecondDerivative(2.0, 1e-5); ret != expected {
+		t.Errorf("SecondDerivative() = %.20f, want %.20f", ret, expected)
+	}
+}
